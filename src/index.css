@@ -1,0 +1,197 @@
+body {
+  background: rgba(245,246,248,255);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+  align-items: center;
+  background: rgba(86,100,209,255);
+  display: flex;
+  height: 50px;
+  width: 100%;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  width: 100%;
+}
+
+section div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: center;
+  width: 400px
+}
+
+section div div {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  align-items: start;
+}
+
+input {
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  background: rgba(245,246,248,255);
+  height: 30px;
+  padding: 5px;
+  width: 390px;
+  margin: 10px;
+  outline: none;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+  background: rgba(86,100,209,255);
+  color: rgba(245,246,248,255);
+  height: 35px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.dont_have_account-container {
+  height: 50px;
+  color: grey;
+}
+
+.dont_have_account-container a {
+  color: rgba(86,100,209,255);
+  text-decoration: none;
+}
+
+/* Estilos del menu del dashboard */
+
+.dashboard_menu-container {
+  align-items: flex-start;
+  background: #fff; 
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  width: 250px;
+}
+
+.dasshboard_menu_head-container {
+  background: #fff; 
+  height: 200px;
+  width: 100%;
+}
+
+.dashboard_menu_container-options {
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard_menu_container-profile {
+  background: papayawhip;
+  background-image: url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+
+.text_user_name {
+  font-size: 18px;
+}
+
+hr {
+  color: rgba(245,246,248,255);
+  opacity: 0.2;
+  width: 100%;
+}
+
+
+/* Mobile version: */
+
+@media(max-width: 420px) {
+
+  section div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: center;
+    width: 380px
+  }
+  
+  input {
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    background: rgba(245,246,248,255);;
+    height: 30px;
+    padding: 5px;
+    width: 370px;
+    margin: 10px;
+    outline: none;
+  }
+
+}
+
+@media(max-width: 380px) {
+
+  section div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: center;
+    width: 320px
+  }
+  
+  input {
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    background: rgba(245,246,248,255);;
+    height: 30px;
+    padding: 5px;
+    width: 310px;
+    margin: 10px;
+    outline: none;
+  }
+
+}
+
+@media(max-width: 300px) {
+
+  section div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: center;
+    width: 250px
+  }
+  
+  input {
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    background: rgba(245,246,248,255);;
+    height: 30px;
+    padding: 5px;
+    width: 240px;
+    margin: 10px;
+    outline: none;
+  }
+
+}
