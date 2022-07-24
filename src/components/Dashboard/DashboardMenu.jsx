@@ -1,7 +1,21 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { Charts } from './Charts';
+import { Students } from '../students/Students';
 
 export const DashboardMenu = () => {
+
+  const [students, setstudents] = useState(false);
+
+  /* Función que me devuelve la lista de los estudiantes: */
+
+  const handleStudents = () => {
+    setstudents(true);
+  }
+
+  const handleReturn = () => {
+    setstudents(false);
+  }
+
   return (
     <>
         <div className="dashboard-container">
@@ -17,11 +31,16 @@ export const DashboardMenu = () => {
                 </div>
                 <hr/>
                 <div className="dashboard_menu_container-options">
-                    {/* Ingresar opción estudiantes para listarlos */}
+                    <button onClick={handleReturn}>Inicio</button>
+                    <button onClick={handleStudents}>Estudiantes</button>
                 </div>
             </section>
             <section>
-                <Charts />
+                {
+                    students 
+                    ? <Students />
+                    : <Charts />
+                }
             </section>
         </div> 
     </>

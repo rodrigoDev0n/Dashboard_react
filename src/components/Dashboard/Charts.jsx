@@ -44,7 +44,6 @@ export const Charts = () => {
                 <div className="chart--3">
                     <p>Porcentaje de alumnos con esa aprobación</p>
                     <h2>75.5%</h2>
-                    <p>12% Alumnos que se retiraron</p>
                 </div>
             </div>
         </div>

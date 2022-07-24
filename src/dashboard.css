@@ -181,3 +181,49 @@ p {
     margin-top: -10px;
 }
 
+/* Students Section */
+
+.students-container {
+    background:#ECECEC;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+.searchBar-container {
+    background: #fff;
+    width: 96%;
+    height: 100px;
+}
+
+.students-list-container {
+    background: #fff;
+    height: 80%;
+    width: 96%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
