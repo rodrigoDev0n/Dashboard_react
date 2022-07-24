@@ -1,0 +1,183 @@
+.dashboard_menu-container {
+  align-items: flex-start;
+  background: #fff; 
+  display: flex;
+  flex-direction: column;
+  height: 93vh;
+  width: 250px;
+}
+
+.dasshboard_menu_head-container {
+  display: flex;
+  background: #fff;
+  margin-top: 20px;
+  height: 150px;
+  width: 100%;
+}
+
+.dashboard_user_container-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.dashboard-container {
+    display: flex;
+
+}
+
+h1 {
+    margin-top: -35px;
+}
+
+p {
+    margin-top: -85px;
+}
+
+.dashboard_menu_container-options {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard_menu_container-profile {
+  background: papayawhip;
+  background-image: url('https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+
+.charts-container {
+    background: #ECECEC;
+    height: 100%;
+    width: 100%;
+}
+
+.text_user_name {
+  font-size: 18px;
+}
+
+.first_section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 38%;
+}
+
+.second_section-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.chart_1-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.chart_2-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart_3-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart--1 {
+    height: 150px;
+    width: 400px;
+    background: #fff;
+}
+
+.chart--2 {
+    height: 150px;
+    width: 400px;
+    background: #fff;
+}
+
+.chart--3 {
+    height: 150px;
+    width: 400px;
+    background: #fff;
+}
+
+.big_chart--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.small_chart--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.big--chart {
+    background: #fff;
+    height: 500px;
+    width: 840px;
+}
+
+.small--chart {
+    background: #fff;
+    height: 500px;
+    width: 400px;
+}
+
+.chart_1-content {
+    display: flex;
+    justify-content: center;
+    background: red;
+    height: 100px;
+    width: 100%;
+}
+
+.chart--1 p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.chart--1 h2 {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.chart--2 p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.chart--2 h2 {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.chart--3 p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.chart--3 h2 {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
