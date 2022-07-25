@@ -4,12 +4,26 @@ import { Navigate } from 'react-router-dom';
 export const Login = () => {
 
   const [loading, setloading] = useState(false);
-  
-  const handleClick = () =>  setloading(true);
+  const [text, setText] = useState('');
+  const [message, setmessage] = useState('INICIAR SESIÓN');
 
   const inputTextValue = ({target: {value}}) => {
-    console.log(value);
+    setText(value)
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    re.test(String(text).toLowerCase()) ? setmessage('INICIAR SESIÓN') : setmessage('Email invalido');
   }
+
+  const handleClick = () => {
+
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const validEmail = re.test(String(text).toLowerCase());
+
+    if(!validEmail) {
+        setmessage('Email invalido');
+    } else {
+        setloading(true);
+    }
+  };
 
   return (
     <>
@@ -24,10 +38,10 @@ export const Login = () => {
                     <h1>Inicio de sesión</h1>
                 </div>
                 <form>
-                    <input type="text" onChange={inputTextValue} placeholder='Ingrese su correo electronico' />
+                    <input type="text" onChange={inputTextValue} placeholder='Ingrese su correo electronico' value={text} />
                     <input type="password" placeholder='Contraseña' />
                 </form>
-                <button onClick={handleClick}>INICIAR SESIÓN</button>
+                <button onClick={handleClick}>{message}</button>
             </div>
         </section>
     </>
