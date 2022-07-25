@@ -7,6 +7,10 @@ export const Login = () => {
   
   const handleClick = () =>  setloading(true);
 
+  const inputTextValue = ({target: {value}}) => {
+    console.log(value);
+  }
+
   return (
     <>
         {
@@ -19,12 +23,11 @@ export const Login = () => {
                 <div>
                     <h1>Inicio de sesión</h1>
                 </div>
-                <input type="text" placeholder='Ingrese su correo electronico' />
-                <input type="text" placeholder='Contraseña' />
+                <form>
+                    <input type="text" onChange={inputTextValue} placeholder='Ingrese su correo electronico' />
+                    <input type="password" placeholder='Contraseña' />
+                </form>
                 <button onClick={handleClick}>INICIAR SESIÓN</button>
-                <div className="dont_have_account-container">
-                    <p>No tienes cuenta? <a href='#'>Registrarse</a></p>
-                </div>
             </div>
         </section>
     </>

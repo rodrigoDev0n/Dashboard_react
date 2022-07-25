@@ -202,9 +202,48 @@ p {
 
 .students-list-container {
     background: #fff;
-    height: 80%;
-    width: 96%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 99%;
+    width: 99%;
 }
+
+.user--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    transition: 0.5s ease-in;
+}
+
+.default_user--container {
+    background: grey;
+    border-radius: 100%;
+    background-image: url('https://cfcdn.apowersoft.info/local/gitmind.com/img/gitmind/png/default-avatar.png');
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+}
+
+.info_container {
+    display: flex;
+    width: 90%;
+    transition: 0.5s ease-in;
+}
+
+.nameUser {
+    margin-top: 10px;
+}
+
+.gradeUser {
+    margin-top: 10px;
+}
+
+
+
+
+
+
 
 
 

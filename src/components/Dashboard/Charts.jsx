@@ -1,16 +1,29 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { ChartBar } from './charts/ChartBar';
 import { ChartPie } from './charts/ChartPie';
-import { DataExample } from '../../helpers/Data';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../helpers/fireabase';
 
 export const Charts = () => {
 
-  const [userData, setuserData] = useState({
-    labels: DataExample.map((data) => data.year),
+  const [chart, setchart] = useState([]);
+  const chartCollectionRef = collection(db, "chartdata");
+
+  useEffect(() => {
+    const getChartData = async () => {
+      const data = await getDocs(chartCollectionRef);
+      setchart(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+      console.log(data)
+    }
+    getChartData()
+  }, []);
+
+  const userData = {
+    labels: chart.map((c) => (c.learningStyle)),
     datasets: [
         {
-            label: "User Gained",
-            data: DataExample.map((data) => data.userGain),
+            label: "Actividades completadas",
+            data: chart.map((d) => d.totalCompleted),
             backgroundColor: [
                 "rgba(75,192,192,1)",
                 "#ecf0f1",
@@ -20,7 +33,7 @@ export const Charts = () => {
             ],
         },
     ]
-  });
+  };
 
   return (
     <>

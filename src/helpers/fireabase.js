@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore}  from "@firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDdnR3_eNjWSaIHgmYLaV1EHSddtA1ocwc",
@@ -11,4 +12,9 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
+
+/* la variable auth sirve para autenticar usuarios con firebase: */
 export const auth = getAuth(app);
+/* la variable db nos permite obtener los datos de nuestra base de datos para cargarlos donde
+creamos conveniente */
+export const db = getFirestore(app);
