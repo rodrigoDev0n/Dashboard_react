@@ -9,16 +9,18 @@ export const Login = () => {
 
   const inputTextValue = ({target: {value}}) => {
     setText(value)
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    re.test(String(text).toLowerCase()) ? setmessage('INICIAR SESIÓN') : setmessage('Email invalido');
   }
+
+  const isvalidEmail = () => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const validEmail = re.test(String(text).toLowerCase());
+    re.test(String(text).toLowerCase()) ? setmessage('INICIAR SESIÓN') : setmessage('Email invalido');
+    return validEmail;
+  } 
 
   const handleClick = () => {
 
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const validEmail = re.test(String(text).toLowerCase());
-
-    if(!validEmail) {
+    if(!isvalidEmail()) {
         setmessage('Email invalido');
     } else {
         setloading(true);
