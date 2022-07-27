@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore}  from "@firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDdnR3_eNjWSaIHgmYLaV1EHSddtA1ocwc",
+  apiKey: "",
   authDomain: "dashboard-cda.firebaseapp.com",
   projectId: "dashboard-cda",
   storageBucket: "dashboard-cda.appspot.com",
